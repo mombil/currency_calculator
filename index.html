@@ -14,7 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-
+    <meta property="og:image" content="images/share.png">
+    <link rel="icon" href="images/icon.jpg">
     <title>Przelicznik Walut</title>
 </head>
 
@@ -23,7 +24,7 @@
     <form class="js-form form">
         <fieldset class="form__fieldset">
             <legend class="form__legend">Kaltulator walut</legend>
-            <label class="form__label"> Wybierz wakut�
+            <label class="form__label"> Wybierz wakutlutę
                 <select class="js-currency">
                     <option value="euro">Euro</option>
                     <option value="usd">USD</option>
@@ -32,7 +33,7 @@
             </label>
             <br><br>
             <label class="form__label">
-                Podaj kwot� w PLN:
+                Podaj kwotę w PLN:
                 <input type="number" min="0" step="any" class="js-pln">
             </label>
             <p class="form__text">Kwota po przeliczeniu wynosi: <strong class="js-result"> N/A</strong>
