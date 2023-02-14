@@ -5,9 +5,8 @@
 On this site you can easly calculate PLN currency to USD, EUR, GBP.
 
 ## Demo
-[Google](https://mombil.github.io/currency_calculator/)
 
-
+[Curency calculator](https://mombil.github.io/currency_calculator/)
 
 ## Technologies
 
