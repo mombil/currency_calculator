@@ -1,30 +1,57 @@
-let currencyElement = document.querySelector(".js-currency")
-let plnElement = document.querySelector(".js-pln")
-let formElement = document.querySelector(".js-form")
-let resultElement = document.querySelector(".js-result")
+{
+	const calculateResult = (pln, currency) => {
+		const euro = 4.71
+		const USD = 4.35
+		const funt = 5.26
+		switch (currency) {
+			case "euro":
+				return (result = pln / euro)
 
-let euro = 4.71
-let USD = 4.35
-let funt = 5.26
+			case "pound":
+				return (result = pln / funt)
 
-let sign
-formElement.addEventListener("input", () => {
-	let pln = +plnElement.value
-	let currency = currencyElement.value
-
-	switch (currency) {
-		case "euro":
-			result = pln / euro
-			break
-
-		case "pound":
-			result = pln / funt
-			break
-
-		case "usd":
-			result = pln / USD
-			break
+			case "usd":
+				return (result = pln / USD)
+		}
 	}
 
-	resultElement.innerText = result.toFixed(2)
-})
+	const assignSign = currency => {
+		let sign
+		switch (currency) {
+			case "euro":
+				return (sign = "€")
+
+			case "pound":
+				return (sign = "£")
+
+			case "usd":
+				return (sign = "$")
+		}
+	}
+
+	
+	const reslutTextUpdate = (sign, result) =>{
+		const resultElement = document.querySelector(".js-result")
+		resultElement.innerText = `${result.toFixed(2)} ${sign}`
+	}
+
+	const onFormInput = () => {
+		
+		const currencyElement = document.querySelector(".js-currency")
+		const plnElement = document.querySelector(".js-pln")
+
+		let pln = +plnElement.value
+		let currency = currencyElement.value
+		let result = calculateResult(pln, currency)
+		let sign = assignSign(currency)
+		reslutTextUpdate(sign, result)
+		}
+
+
+	const init = () => {
+		const formElement = document.querySelector(".js-form")
+		formElement.addEventListener("input", onFormInput)
+	}
+
+	init()
+}
