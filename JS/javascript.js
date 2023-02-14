@@ -40,10 +40,10 @@
 		const currencyElement = document.querySelector(".js-currency")
 		const plnElement = document.querySelector(".js-pln")
 
-		let pln = +plnElement.value
-		let currency = currencyElement.value
-		let result = calculateResult(pln, currency)
-		let sign = assignSign(currency)
+		const pln = +plnElement.value
+		const currency = currencyElement.value
+		const result = calculateResult(pln, currency)
+		const sign = assignSign(currency)
 		reslutTextUpdate(sign, result)
 		}
 
