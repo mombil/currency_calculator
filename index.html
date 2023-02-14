@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/footer.css" rel="stylesheet">
+    <link href="CSS/form.css" rel="stylesheet">
+    <script defer src="JS/javascript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Przelicznik Walut</title>
+</head>
+
+<body class="body">
+
+    <form class="js-form form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Kaltulator walut</legend>
+            <label class="form__label"> Wybierz wakut�
+                <select class="js-currency">
+                    <option value="euro">Euro</option>
+                    <option value="usd">USD</option>
+                    <option value="pound">Funt Brytyjski</option>
+                </select>
+            </label>
+            <br><br>
+            <label class="form__label">
+                Podaj kwot� w PLN:
+                <input type="number" min="0" step="any" class="js-pln">
+            </label>
+            <p class="form__text">Kwota po przeliczeniu wynosi: <strong class="js-result"> N/A</strong>
+            </p>
+        </fieldset>
+    </form>
+    <footer class="footer">Wartość walut z dnia 03.02.2022 </footer>
+</body>
+
+</html>
