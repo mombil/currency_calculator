@@ -14,4 +14,5 @@ html {
 	background-image: url(../images/background.jpg);
 	color: #fff;
 	background-position: center;
+	background-size: cover;
 }
