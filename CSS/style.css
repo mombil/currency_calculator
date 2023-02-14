@@ -11,7 +11,7 @@ html {
 .body {
 	max-width: 1000px;
 	margin: auto;
-	background-color: #eee;
+	background-image: url(../images/background.jpg);
 	color: #fff;
+	background-position: center;
 }
-
